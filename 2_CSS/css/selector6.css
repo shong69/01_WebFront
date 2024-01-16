@@ -1,0 +1,31 @@
+/*5순위 : 태그 선택자*/
+div {
+    width:200px;
+    height:200px;
+    background-color: red !important; /*1순위 : css속성*/
+}
+
+/*4순위 : 클래스 선택자*/
+.cls1{
+    background-color: green;
+}
+
+.cls1{
+    background-color: yellow;
+    /*동일한 우선순위에선 마지막으로 적용된 설정값이 적용됨*/
+}
+
+/*3순위 : id 선택자*/
+#test1 {
+    height:100px;
+    background-color: black;
+    color:white;
+}
+
+/*2순위 : inline-style 속성*/
+/*html 문서 내에 작성됨*/
+
+/*1순위 : css속성*/
+/*원하는 스타일에 !important 작성 시 1순위 항목이 됨*/
+
+

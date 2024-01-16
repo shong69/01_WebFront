@@ -1,0 +1,100 @@
+.box {
+    width:100px;
+    height:100px;
+    background-color: lightblue;
+}
+
+/*content 영역*/
+
+.content {
+    width: 150px;
+    height: 150px;
+    /*width, height 속성은 기본적으로 content 영역의 크기를 지정함
+    */
+}
+
+/*border 영역*/
+.border {
+    border:10px solid red;
+}
+
+/*padding 영역*/
+.padding {
+    padding:30px;
+}
+
+/*margin 영역*/
+.margin {
+    margin:50px;
+}
+#m1 {
+    margin:100px;
+}
+/*서로 다른 요소의 margin이 겹칠 경우
+더 큰 margin을 가진 요소의 값을 따른다*/
+
+/***********************/
+
+.padding-test {
+    padding-top:20px;
+    padding-left: 30px;
+    padding-bottom: 50px;
+    padding-right: 100px;
+
+    /*padding 속성 : 
+    작성법에 따라서 padding 특정 방향에 
+    크기를 지정할 수 있다.
+    */
+
+    /*값 1개 : 상하좌우 적용*/
+    padding:50px;
+    /*값 2개 : 상하,좌우 적용*/
+    padding:50px 100px;
+    /*값 3개 : 상, 좌우, 하 적용*/
+    padding:10px 50px 100px;
+     /*값 4개 : 상, 우, 하, 좌(시계방향으로) 적용*/
+    padding:10px 20px 30px 40px;
+}
+
+/*border(속성이 조금 다름)*/
+.border-test{
+    border-top:3px solid black;
+    border-bottom: 5px dashed magenta;
+    border-left: 10px dotted blue;
+    border-right:10px double orange;
+}
+/*border 속성은 상하좌우 방향을 별도로 지정할 수 없음*/
+
+/*margin*/
+.box-container{
+    border:2px solid black;
+    width:500px;
+    height:300px;
+}
+
+/*margin에서는 padding과 같이 상하좌우 방향이 적용 가능함*/
+.margin-auto {
+    margin-top:100px;
+    margin:auto;
+    /*좌우요소간의 간격을 자동으로 지정하여 가운데 정렬하는 역할
+    ->margin 속성은 상하좌우를 동시에 지정하기 때문에 
+    상(top)부분에도 auto가 지정되어, 적용됐던 100px이 덮어쓰기 되었음.
+    ->상하에 값을 부과하고 싶다면 auto보다 아래에 적어 덮어 씌운다.
+    */
+}
+
+#box-sizing {
+    /*테두리 10px. 패딩20px, 내용 나머지 
+    전체 요소 크기가 가로/세로 각각 300px인
+    정사각형 만들기
+    */
+    border: 10px solid black;
+    padding:20px;
+    
+    width:300px;
+    height:300px;
+
+    box-sizing: border-box;
+}
+
+
