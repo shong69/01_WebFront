@@ -1,0 +1,296 @@
+.container-1 {
+    border:2px solid black;
+    width:800px;
+    height:500px;
+
+    display:flex;
+    flex-direction: column;
+}
+
+
+.upper-1, .bottom-1{
+    background-color: gray;
+    flex-basis:20%;
+}
+.mid-1{
+    flex-basis:60%;
+
+    display:flex;
+}
+
+.skyblue{
+    border:1px solid black;
+    background-color: skyblue;
+    flex-basis:30%;
+}
+
+.brown{
+    border:1px solid black;
+    background-color: brown;
+    flex-basis:50%;
+}
+
+.beige{
+    border:1px solid black;
+    background-color: beige;
+    flex-basis:20%;
+}
+
+/************************문제2************************/
+
+
+.container-2 {
+    border:2px solid black;
+    width:800px;
+    height:500px;
+
+    display:flex;
+    flex-direction: column ;
+}
+.upper-2{
+    flex-basis:20%;
+    background-color: red;
+}
+.bottom-2{
+    flex-basis:80%;
+    display:flex;
+}
+.yellow {
+    border:1px solid black;
+    background-color: yellow;
+    flex-basis:30%;
+}
+.right-2{
+    display:flex;
+    flex-direction:column;
+    flex-basis:70%
+}
+.green{
+    border:1px solid black;
+    background-color: yellowgreen;
+    flex-basis:80%;
+}
+.blue{
+    border:1px solid black;
+    background-color: blue;
+    flex-basis:20%;
+}
+
+
+
+
+/************************문제3************************/
+
+
+
+.container-3{
+    border:1px solid black;
+    width:800px;
+    height:500px;
+
+    display:flex;
+    flex-direction: column;
+}
+.upper-3{
+    border:1px solid black;
+    background-color: yellow;
+    flex-basis: 30%;
+}
+.bottom-3{
+    flex-basis: 70%;
+
+    display:flex;
+}
+.left-3{
+    border:1px solid black;
+    background-color: skyblue;
+    flex-basis:30%;
+}
+.right-3{
+    flex-basis:70%;
+    display:flex;
+    flex-direction:column;
+}
+.bupper-3{
+    flex-basis:50%;
+    display:flex;
+}
+.bbottom-3{
+    border:1px solid black;
+    background-color: hotpink;
+    flex-basis:50%;
+}
+.aquamarine{
+    background-color:aquamarine;
+    flex-basis:70%;
+}
+.red{
+    background-color: red;
+    flex-basis:30%;
+}
+
+/************************문제4************************/
+
+.container-4{
+    border:1px solid black;
+    width:800px;
+    height:500px;
+    display:flex;
+    flex-direction:column;
+}
+.upper-4{
+    border:1px solid black;
+    background-color: aquamarine;
+    flex-basis:20%;
+}
+.mid-4{
+    border:1px solid black;
+    flex-basis:60%;
+    display: flex;
+}
+.bottom-4{
+    border:1px solid black;
+    background-color: aquamarine;
+    flex-basis:20%;
+}
+
+.left-4{
+    border:1px solid black;
+    background-color: aqua;
+    flex-basis:30%;
+}
+.right-4{
+    border:1px solid black;
+    background-color:darkorange;
+    flex-basis:70%;
+    display:flex;
+
+    justify-content: space-between;
+    align-items: end;
+}
+.box{
+    border:1px solid black;
+    width:150px;
+    height:150px;
+}
+
+
+
+/************************문제5************************/
+
+.container-5{
+    border:1px solid black;
+    width:800px;
+    height:500px;
+    display:flex;
+    flex-direction:column;
+}
+.upper-5{
+    flex-basis:30%;
+    display:flex
+}
+.ubox1{
+    border:1px solid black;
+    background-color: yellow;
+    flex-basis:20%;
+}
+.ubox2{
+    border:1px solid black;
+    background-color: yellow;
+    flex-basis:40%;
+}
+.ubox3{
+    border:1px solid black;
+    background-color: yellow;
+    flex-basis:40%;
+}
+
+.bottom-5{
+    flex-basis:70%;
+    display:flex;
+}
+.left-5{
+    border:1px solid black;
+    flex-basis:30%;
+    display:flex;
+    flex-direction:column;
+}
+.lbox1{
+    border:1px solid black;
+    background-color: skyblue;
+    flex-basis: calc(100%/3);
+}
+.lbox2{
+    border:1px solid black;
+    background-color: skyblue;
+    flex-basis: calc(100%/3);
+}
+.lbox3{
+    border:1px solid black;
+    background-color: skyblue;
+    flex-basis: calc(100%/3);
+}
+
+.bar{
+    border:1px solid black;
+    background-color: pink;
+    flex-basis:15%;
+}
+
+
+.mid-5{
+    border:1px solid black;
+    flex-basis:40%;
+    display:flex;
+    flex-direction: column;
+}
+.orange{
+    border:1px solid black;
+    flex-basis:50%;
+    background-color: orange;
+}
+.bottom-6{
+    flex-basis: 50%;
+    display:flex;
+}
+.green-5{
+    display: flex;
+    flex-basis: 50%;
+    flex-direction: column;
+}
+.gbox1{
+    border:1px solid black;
+    background-color: green;
+    flex-basis: 50%;
+}
+.gbox2{
+    border:1px solid black;
+    background-color: green;
+    flex-basis: 50%;
+}
+.red-5{
+    border:1px solid black;
+    background-color: red;
+    flex-basis: 50%;
+}
+.right-5{
+    border:1px solid black;
+    flex-basis:15%;
+    display:flex;
+    flex-direction: column;
+}
+.rbox1{
+    border:1px solid black;
+    background-color: pink;
+    flex-basis:20%;
+}
+.rbox2{
+    border:1px solid black;
+    background-color: pink;
+    flex-basis:60%;
+}
+.rbox3{
+    border:1px solid black;
+    background-color: pink;
+    flex-basis:20%;
+}

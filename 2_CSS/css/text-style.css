@@ -1,0 +1,138 @@
+/*color 속성*/
+
+#color-ul <li{
+    font-size=24px;
+    font-weight:bold;
+}
+
+#color-ul >li:nth-child(1){
+    color: red;
+}
+#color-ul >li:nth-child(2){
+    color: #2317f5;
+}
+#color-ul >li:nth-child(3){
+    color: rgb(50, 150, 150); /*0~255 사이 값들 입력*/
+}
+#color-ul >li:nth-child(4){
+    color: rgba(50, 100, 150, 0.3); 
+    /*0~255 사이 값들 입력, alpha는 투명도*/
+}
+#color-ul >li:nth-child(5){
+    color:hsl(360, 100%, 50%);/*색상, 채도, 명도를 가리킴*/
+}
+#color-ul >li:nth-child(6){
+    color:hsla(360, 100, 50, 0.5);/*색상, 채도, 명도, 투명도*/
+}
+
+
+
+/*text-decoration*/
+#deco-ul >li:nth-child(1){
+    text-decoration:underline;
+}
+#deco-ul >li:nth-child(2){
+    text-decoration:line-through;
+}
+#deco-ul >li:nth-child(3){
+    text-decoration:overline;
+}
+#deco-ul >li:nth-child(4) > a{
+    text-decoration:none;
+}
+
+
+
+
+
+/*text-align*/
+#align-test {
+    width:350px;
+    border:2px solid black;
+}
+
+#align-test > p:nth-child(1){
+    text-align:left; /*기본값*/
+}
+#align-test > p:nth-child(2){
+    text-align:right
+}
+#align-test > p:nth-child(3){
+    text-align:center;
+}
+#align-test > p:nth-child(4){
+    text-align:justify;
+}
+
+#div1 >div {
+    width : 50px;
+    height :50px;
+    background-color: red;
+
+    display: inline-block;
+}
+
+#div1{
+    text-align: center;
+}
+
+
+/*line-height*/
+#line-test >p:last-child{
+    line-height: 30px;
+}
+/*글자를 요소 정중앙에 위치하기*/
+#center-test{
+    width:200px;
+    height:200px;
+    border:1px solid black;
+
+    text-align:center; /*중간 맨 위에 위치하게됨*/
+
+}
+
+#center-test>span{
+    background-color: pink;
+    line-height: 200px; /*장간을 바깥 상자의 높이만큼 주면 된다.*/
+}
+
+/*자간 주기*/
+#letter-test {
+    letter-spacing: 10px;
+}
+
+/*텍스트 그림자 효과*/
+
+#shadow-test{
+    background-color: black;
+    padding:30px;
+}
+#shadow-test>p{
+    font-size: 75px;
+    font-weight: bold;
+}
+
+#shadow-test>p:nth-child(1){
+    color:orange;
+    text-shadow:3px 3px white;
+}
+#shadow-test>p:nth-child(2){
+    color:white;
+    text-shadow:5px 5px 5px #bbb; 
+}
+#shadow-test>p:nth-child(3){
+    color:rgba(255, 255, 255, 0.9); /*네온사인 같은 효과*/
+    text-shadow:0px 0px 10px white;
+}
+#shadow-test>p:nth-child(4){
+    text-shadow:0px 0px 4px #ccc,
+    0px 5px 4px #ff3,
+    2px -10px 6px #fd3,
+    -2px -15px 11px #f80,
+    2px -20px 18px #f20;
+}
+
+
+
+
+

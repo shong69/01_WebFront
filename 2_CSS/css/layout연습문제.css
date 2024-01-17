@@ -1,0 +1,73 @@
+* {
+    box-sizing: border-box;
+    margin:0;
+    padding:0;
+}
+.container {
+    border:1px solid black;
+    width:500px;
+    height:500px;
+    position:absolute;
+}
+
+.box{
+    border:1px solid white;
+    width:100px;
+    height:100px;
+}
+/**
+.red{
+    background-color: red;
+}
+.green{
+    background-color: green;
+}
+**/
+
+#row3 {
+    position:absolute;
+    top:200px;
+    background-color: red;
+}
+#row4 {
+    position:absolute;
+    top:300px;
+    background-color: red;
+}
+#row5-1 {
+    position:absolute;
+    top:400px;
+    background-color: red;
+}
+#row5-2 {
+    position:absolute;
+    top:400px;
+    left:100px; 
+    background-color: red;
+}
+#col2 {
+    position:absolute;
+    background-color: green;
+    top:300px;
+    left:100px;
+}
+#col3-1 {
+    position:absolute;
+    background-color: green;
+    top:300px;
+    left:200px;
+}
+#col3-2 {
+    position:absolute;
+    background-color: green;
+    top:400px;
+    left:200px;
+}
+#col4 {
+    position:absolute;
+    background-color: green;
+    top:400px;
+    left:300px;
+}
+
+/*html에서 <table>을 이용하여 만드는 방법도 있음*/
