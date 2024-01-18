@@ -63,7 +63,7 @@ div{
 
 
     /*justify content*/
-    /*메인축 방향으로 item의 정렬 방법을 조정함*/
+    /*메인축 방향으로 item의 정렬 방법(위치)를 조정함*/
 
     /*메인축 방향으로 앞에서부터 정렬(기본값)*/
     /*justify-content: flex-start;*/
