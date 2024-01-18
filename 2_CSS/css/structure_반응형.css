@@ -1,0 +1,274 @@
+*{
+    box-sizing:border-box;
+    /*박스 사이즈가 내가 보는대로(margin이나 padding이 박스사이즈에 포함)*/
+    /*border:1px solid black;*/
+}
+body {
+    margin:0;
+}
+
+main {
+    width:1140px;
+    margin:auto; /*좌,우의 마진을 자동 정렬해 중앙에 위치하도록*/
+}
+/******************************header********************************/
+header {
+    height:200px;
+    display:flex;
+}
+
+header > section:nth-of-type(1),
+header > section:nth-of-type(3) {
+    flex-basis:15%;
+}
+header > section:nth-of-type(2){
+    flex-basis:70%;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/*로고*/
+header > section:nth-of-type(1) {
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+#home-logo{
+    width:120px;
+}
+
+/*검색 스타일 지정*/
+.search-area{
+    width:500px;
+}
+.search-area fieldset{
+    border:2px solidi #455ba8;
+    border-radius:5px;
+    margin:0;
+    padding:2px;
+
+    display:flex;
+}
+
+#query{
+    padding:10px;
+    font-size: 18px;
+    font-weight:bold;
+    border:none;    /*0도 가능*/
+    outline:none; /*0도 가능*/
+    /*outline: input태그에 포커스가 맞춰졌을 때 이를 표현하기 위한 바깥선*/
+    flex-basis:92%;
+}
+
+#search-btn {
+    flex-basis:8%;
+    cursor:pointer;
+    font-size:20px; /*아이콘은 하나의 텍스트로 인식하고 있기 때문에 사이즈 바꿀 때 font-size를 쓴다*/
+    color:#455ba8; /*위와 마찬가지로 아이콘의 색도 color로 바꿀 수 있다.*/
+    border : none;
+    background-color: transparent; /*배경색상 투명으로 변경*/
+}
+
+
+
+
+/*******************************nav******************************/
+
+nav{
+    height: 50px;
+    border-bottom: 2px solid black;
+}
+
+/*nav>ul 스타일*/
+nav > ul {
+    list-style:none; /*목록의 글머리기호 삭제*/
+    display:flex;
+    margin:0;
+    padding:0;
+    height:100%; /*nav태그의 50px 전체를 차지하겠다*/
+}
+nav li {
+    flex-basis:150px;
+}
+
+nav a{
+    text-decoration: none; /*underline 삭제*/
+    font-size:18px;
+    font-weight:bold;
+    color:black;
+    height:100%;
+    display:block; /*height 지정한 값이 먹히기 위해서*/
+
+    text-align : center;
+    line-height:50px; /*글씨의 높이가 중간에 오기 위해서 텍스트의 높이를 전체 높이로 지정한다*/
+
+    /*호버 시 transition 효과 부여*/
+    transition-duration: 0.2s;
+    border-radius:5px;
+}
+
+/*호버 시 배경색, 폰트 변화*/
+nav a:hover{
+    background-color: #455ba8;
+    color:white;
+}
+
+/*******nav 스크롤 시 화면 상단 붙임 기능*********/
+nav{
+    background-color: white;
+    position:sticky;
+    top:0; /*최상단에 붙인다*/
+    
+}
+    /*sticky:스크롤이 임계점에 도달했을 때 화면에 스티커처럼 붙임(화면 특정 위치 고정)
+        -평소에는 static상태임(기본position이다가 임계점 도달 시 sticky 상태가 됨)
+        fixed는 어떤 화면이든 계속 붙어있는 상태라 sticky와 다름
+
+        top, bottom, left, right 속성이 필수로 작성 돼야 함
+        ->임계점 도달 시 어느 위치에 부착할 지 정해야 하기 때문
+    */
+/********************************content**********************************/
+
+.content {
+    height:800px;
+    display:flex;
+}
+.content-1 {flex-basis:70%;}
+.content-2 {flex-basis:30%;}
+
+/*****************login 스타일*********************************************/
+
+form[name="login-form"] {
+    height:150px;
+    padding:10px;
+    margin-top:10px;
+
+    display:flex;
+    flex-direction: column;
+}
+
+form[name="login-form"] >label {
+    margin-top: 5px;
+    font-size:14px;
+    flex-basis:20%;
+}
+
+
+#signup-find-area {
+    flex-basis: 20%;
+    margin-top:10px;
+    padding-left:5px;
+}
+/*회원가입, id/pw찾기 영역*/
+#signup-find-area>a {
+    color:black;
+    text-decoration:none;
+    font-size:14px;
+}
+
+#signup-find-area >span {
+    padding:0 10px; /*상하:0, 좌우:10씩*/
+}
+
+/*id,pw 입력, 아이디 저장 영역*/
+#id-pw-area {
+    flex-basis:60%;
+
+    display:flex;
+    margin:0;
+    padding:0;
+    border:1px solid #ddd;
+}
+
+#id-pw-area>section:first-child {
+    flex-basis:75%;
+    display:flex;
+    flex-direction: column;
+}
+#id-pw-area>section:last-child {
+    flex-basis:25%;
+}
+
+#id-pw-area input {
+    border:0;
+    /*선택했을 때 생기는 선 삭제*/
+    outline:none;
+    padding:5px;
+    /*id,pw input영역이 공간에 꽉 차도록*/
+    flex-basis:50%;
+    /**/
+    border-right:1px solid #ddd;
+}
+/*id/pw 와 로그인 버튼 사이의 선*/
+#id-pw-area input:first-child {
+    border-bottom:1px solid #ddd;
+}
+
+/*id,pw input에 focus 시 파란색 테두리 선 생기게*/
+#id-pw-area input:focus{
+    border:2px solid #455ba8;
+}
+
+/*로그인 버튼*/
+#id-pw-area button {
+    width:100%;
+    height:100%;
+    border:0;
+    background-color: transparent;
+    cursor: pointer;
+}
+#id-pw-area button:hover{
+    background-color: #455ba8;
+    columns: white;
+}
+
+
+/***************footer*********************************************/
+
+footer{
+    height:200px;
+    background-color: #a3add342;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:center;
+}
+
+footer>p{
+    font-weight:bold;
+}
+footer >section>*{
+    font-size:14px;
+}
+
+footer a{
+    color:black;
+    text-decoration:none;
+}
+
+footer span{
+    padding:0 10px;
+}
+
+
+/*반응형 모바일 기준
+-해상도가 767px 이하면 무조건 여기 작성된 대로 css를 적용해라
+*/
+@media all and(max-width:767px) {
+    main{
+        width:100vw; /*뷰포트 기준*/
+    }
+    header{
+        display:none;
+    }
+    nav {
+        width:100%;
+        border-bottom:none;
+        height:auto;
+    }
+    nav>ul{
+        display:flex;
+        flex-direction: column;
+    }
+}

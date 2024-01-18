@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YouTubeCloneCoding</title>
+    <link rel="stylesheet" href="css/YouTubeCloneCoding.css">
+
+    <script src="https://kit.fontawesome.com/4b505ed7b7.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+    <main>
+        <!--상단 fixed(로고, 검색창, 계정정보 등)-->
+        <!--메인 좌측(영상, 영상정보, 댓글)-->
+        <!--메인 우측(광고, 추천영상)-->
+        <header>
+            <section class="logo-area">
+                <!--목록 아이콘-->
+                <section>
+                    <a id="a" href="#" >
+                        <button id="hamburger-btn" class="fa-solid fa-bars"></button>
+                    </a>
+                </section>
+                <section>
+                    <!--로고-->
+                    <a href="#">
+                        <img class="home-logo"src="../images/YouTubeLogo.jpg"> <!--로고 크기 조절하기!!-->
+                    </a>
+                </section>
+            </section>
+
+
+            <section class="search-area">
+                <form action="#" name="search-form">
+                    <fieldset>
+                            <input id="query" placeholder="검색"><!--input-->
+                            <button type="button" id="keyboard-btn" class="fa-solid fa-keyboard"></button><!--키보드아이콘-->
+                            <button id="search-btn" class="fa-solid fa-magnifying-glass"></button><!--검색아이콘-->
+
+                    </fieldset>
+                    <button type="button" id="record-btn" class="fa-solid fa-microphone"></button><!--녹음아이콘-->
+                </form>
+            </section>
+
+
+            <section class="personal-area">
+                <button type="button" id = "video-btn"class="fa-solid fa-video"></button>
+                <button type="button" id= "bell-btn" class="fa-regular fa-bell"></button>
+                <button type="button" id= "profile-btn" class="fa-solid fa-user"></button>
+            </section><!--녹화, 벨, 계정 아이콘-->
+                
+        </header>
+        <section class="main-area">
+            <section class="main-left-area">
+                <section class="video-area">
+                    <div id="video"><img src="../images/YouTubeVideo.png"></div>
+                </section>
+
+                <section class="video-title-area">
+                    [EN/JP] 240111 mini핑계고 : 유재석, 조세호, 규현, 호시 @뜬뜬편집실 (OneCam) ㅣ EP.8
+                </section>
+
+                <section class="channel-area">
+                    <section>
+                        <section id="channel-img">
+                            <button class="fa-solid fa-user"></button>
+                        </section>
+
+                        <section id="channel-name">뜬뜬 DdeunDdeun </section>
+
+                        <section id="subscribe"></section>
+                    </section>
+                    <section></section><!--빈공간-->
+                    <section>
+                        <section id="like-btn"></section>
+                        <section id="dislike-btn"></section>
+                        <section id="share-btn"></section>
+                        <section id="etc-btn"></section>
+                    </section>
+                </section>
+
+                <section class="video-expl-area">대충 채널 설명....</section>
+
+                <section class="comment-amount-area">
+                    <section id="comment-amount"></section>
+                    <section id="sort"></section>
+                </section>
+
+                <section class="comment-header-area">
+                    <section id="com-profile"></section>
+                    <section id="leave-com"></section>
+                </section>
+
+                <section class="comment-area"></section>
+            </section><!--좌측-->
+
+            <section class="main-right">
+
+            </section><!--우측-->
+        </section>
+    </main>
+    <!--footer 없음-->
+</body>
+</html>

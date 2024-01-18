@@ -23,6 +23,7 @@ div{
     height: 700px;
 
     display:flex; /*flex 속성은 부모에게만 부여함*/
+    
     /*item(내부 요소)를 감싸는 요소의 형식을 flex로 변경
     ->item에 자동으로 지정된 margin 요소가 모두 사라지고 
     content 영역만큼의 크기만 가지게 됨 ->inline이 된다
