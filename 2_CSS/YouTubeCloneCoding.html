@@ -54,7 +54,7 @@
         <section class="main-area">
             <section class="main-left-area">
                 <section class="video-area">
-                    <div id="video"><img src="../images/YouTubeVideo.png"></div>
+                    <img id="video" src="../images/YouTubeVideo.png">
                 </section>
 
                 <section class="video-title-area">
@@ -64,39 +64,166 @@
                 <section class="channel-area">
                     <section>
                         <section id="channel-img">
-                            <button class="fa-solid fa-user"></button>
+                            <button type="button" class="fa-solid fa-user"></button>
                         </section>
 
                         <section id="channel-name">뜬뜬 DdeunDdeun </section>
 
-                        <section id="subscribe"></section>
+                        <section id="subscribe">
+                            <button type="button">구독</button>
+                        </section>
                     </section>
                     <section></section><!--빈공간-->
                     <section>
-                        <section id="like-btn"></section>
-                        <section id="dislike-btn"></section>
-                        <section id="share-btn"></section>
-                        <section id="etc-btn"></section>
+                        <section id="like-btn">
+                            <button id="like" type="button" class="fa-regular fa-thumbs-up"></button>
+                            <span>|</span>
+                            <button id="dislike" type="button"  class="fa-regular fa-thumbs-down"></button>
+                        </section>
+                        <section id="share-btn">
+                            <button id="share"  type="button" class="fa-solid fa-share">공유</button>
+                        </section>
+                        <section id="etc-btn">
+                            <button id="etc" type="button"  class="fa-solid fa-download">오프라인 저장</button>
+                        </section>
                     </section>
                 </section>
 
-                <section class="video-expl-area">대충 채널 설명....</section>
-
-                <section class="comment-amount-area">
-                    <section id="comment-amount"></section>
-                    <section id="sort"></section>
+                <section class="video-expl-area">
+                    <p>대충 채널 설명....<br>
+                        국무총리는 국회의 동의를 얻어 대통령이 임명한다.
+                        국채를 모집하거나 예산외에 국가의 부담이 될 계약을 체결하려 할 때에는 정부는 미리 국회의 의결을 얻어야 한다....더보기
+                    </p>
                 </section>
 
-                <section class="comment-header-area">
-                    <section id="com-profile"></section>
-                    <section id="leave-com"></section>
+                <section class="comment-amount-area">
+                    <section id="comment-amount">
+                        <p>댓글 N개</p>
+                    </section>
+                    <section id="sort">
+                        <button type="button" class="fa-solid fa-arrow-up-wide-short">&nbsp정렬기준</button>
+                    </section>
+                </section>
+
+                <section>
+                    <form class="comment-header-area">
+                        <section id="com-profile">
+                            <button type="butotn" class="fa-solid fa-user"></button>
+                        </section>
+                        <section class="lev-com-area">
+                            <section>
+                                <input id="com"type="text" placeholder="댓글 추가..." autocomplete="none">
+                            </section>
+
+                            <section id="com-line"></section>
+                            <section>
+                                <button id="del-com" type="reset">취소</button>
+                                <button id="sub-com"type="submit">댓글</button>
+                            </section>
+                        </section>
+                    </form>
                 </section>
 
                 <section class="comment-area"></section>
             </section><!--좌측-->
 
             <section class="main-right">
+                <section id="ad-area">
+                    <a href="#">
+                        <img src="../평가/asian-girl-cooking-fried-chicken-pan-asian-girl-cooking-fried-chicken-pan-her-kitchen-183701745.webp">
+                    </a>
+                </section> <!--광고-->
 
+                <section id="rec-videos">
+                    <section>
+                        <a href="#">
+                            <img id="thumbnail" src="../images/youtubethumb1.jpg">
+                        </a><!--썸네일-->
+                    </section>
+                    <section id="rec-vid-title">
+                        <a href="#">
+                            <p>유럽 비싸서 못가...바가지 기승</p>
+                            <p>SBS뉴스</p>
+                            <section>
+                                <p>조회수N만회</p>&nbsp&nbsp<p>9개월전</p>
+                            </section>
+                        </a>
+
+                    </section><!--제목--><!--채널명&조회수&업로드 시점-->
+                </section>
+
+                <section id="rec-videos">
+                    <section>
+                        <a href="#">
+                            <img id="thumbnail" src="../images/youtubethumb2.jpg">
+                        </a><!--썸네일-->
+                    </section>
+                    <section id="rec-vid-title">
+                        <a href="#">
+                            <p>유럽 비싸서 못가...바가지 기승</p>
+                            <p>SBS뉴스</p>
+                            <section>
+                                <p>조회수N만회</p>&nbsp&nbsp<p>9개월전</p>
+                            </section>
+                        </a>
+
+                    </section><!--제목--><!--채널명&조회수&업로드 시점-->
+                </section>
+
+                <section id="rec-videos">
+                    <section>
+                        <a href="#">
+                            <img id="thumbnail" src="../images/youtubethumb3.jpg">
+                        </a><!--썸네일-->
+                    </section>
+                    <section id="rec-vid-title">
+                        <a href="#">
+                            <p>유럽 비싸서 못가...바가지 기승</p>
+                            <p>SBS뉴스</p>
+                            <section>
+                                <p>조회수N만회</p>&nbsp&nbsp<p>9개월전</p>
+                            </section>
+                        </a>
+
+                    </section><!--제목--><!--채널명&조회수&업로드 시점-->
+                </section>
+                
+                <section id="rec-videos">
+                    <section>
+                        <a href="#">
+                            <img id="thumbnail" src="../images/youtubethumb3.jpg">
+                        </a><!--썸네일-->
+                    </section>
+                    <section id="rec-vid-title">
+                        <a href="#">
+                            <p>유럽 비싸서 못가...바가지 기승</p>
+                            <p>SBS뉴스</p>
+                            <section>
+                                <p>조회수N만회</p>&nbsp&nbsp<p>9개월전</p>
+                            </section>
+                        </a>
+
+                    </section><!--제목--><!--채널명&조회수&업로드 시점-->
+                </section>
+                
+                <section id="rec-videos">
+                    <section>
+                        <a href="#">
+                            <img id="thumbnail" src="../images/youtubethumb3.jpg">
+                        </a><!--썸네일-->
+                    </section>
+                    <section id="rec-vid-title">
+                        <a href="#">
+                            <p>유럽 비싸서 못가...바가지 기승</p>
+                            <p>SBS뉴스</p>
+                            <section>
+                                <p>조회수N만회</p>&nbsp&nbsp<p>9개월전</p>
+                            </section>
+                        </a>
+
+                    </section><!--제목--><!--채널명&조회수&업로드 시점-->
+                </section>
+                
             </section><!--우측-->
         </section>
     </main>

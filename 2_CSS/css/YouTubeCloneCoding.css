@@ -1,6 +1,6 @@
 * {
     box-sizing: border-box;
-    border:1px solid black;
+    /*border:1px solid black;*/
 }
 body{
     margin:0;
@@ -121,31 +121,48 @@ fieldset {
 .main-area{
     display:flex;
 }
-.main-area:first-of-type{
-    flex-basis:70%;
-}
 
+.main-area>section:first-of-type{
+    flex-basis:70%;
+    border:1px solid red;
+} 
+.main-area>section:nth-of-type(2){
+    flex-basis:30%;
+    border:1px solid yellow;
+}
+.main-left-area{
+    flex-basis:100%;
+}
+#video{
+    width:800px;
+    margin:10px;
+    margin-top:0;
+    padding:0;
+}
 .video-title-area{
-    font-size:20px;
+    font-size:18px;
     font-weight: bold;
     margin-top:10px;
+    letter-spacing: -1px;
 }
 
 .channel-area{
     display: flex;
+    justify-content: space-between;
 }
-.channel-area>section{
+.channel-area>section:first-of-type{
     display:flex;
     align-items: center;
+    flex-basis:33%;
 }
 
 #channel-img>button{
     height:40px;
     width:40px;
-    margin-top:10px;
     font-size:25px;
     border:none;
     border-radius:50%;
+    cursor: pointer;
 }
 
 #channel-name{
@@ -153,17 +170,182 @@ fieldset {
     font-weight:bold;
 }
 
-/*버튼 왜 안뜨냐!!*/
-#subscribe>div{
-    background-color: red;
+
+#subscribe>button{
+    background-color: black;
     border:none;
     border-radius:30px;
     color:white;
+    font-weight:bold;
+    font-size:12px;
+    padding:10px 15px;
+    cursor: pointer;
 }
 
 
 .channel-area>section:nth-of-type(2){
-    width:400px;
+    flex-basis:33%;
+}
+.channel-area>section:nth-of-type(3){
+    flex-basis:33%;
+    display:flex;
+    justify-content: flex-end;
+    align-items: center;
 }
 
-.channel-area>section:nth-of-type(2){}
+#like-btn, #share-btn, #etc-btn{
+    border:1px solid #ddd;
+    border-radius:30px;
+    height:30px;
+    margin:5px;
+    background-color: #ddd;
+}
+
+#like, #dislike, #share, #etc{
+    cursor: pointer;
+    border:none;
+    background-color: transparent;
+}
+
+/*영상 설명란*/
+.video-expl-area{
+    margin-top:15px;
+    background-color: #ddd;
+    border-radius: 5px;
+    padding:5px;
+    font-size: 12px;
+}
+
+/*댓글창*/
+.comment-amount-area{
+    display:flex;
+    align-items: center;
+}
+#comment-amount{
+    flex-basis:10%;
+    margin-right:15px;
+    font-weight: bold;
+}
+#sort{
+    flex-basis:15%;
+}
+#sort>button{
+    background-color: transparent;
+    border:none;
+    margin:0;
+    cursor: pointer;
+}
+
+
+.comment-header-area{
+    display:flex;
+    align-items: center;
+}
+#com-profile>button{
+    font-size:20px;
+    border:none;
+    border-radius: 50px;
+    height:30px;
+    cursor: pointer;
+}
+.lev-com-area{
+    flex-basis:90%;
+    margin:10px;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.lev-com-area>section:nth-of-type(3){
+    display:flex;
+    justify-content: flex-end;
+}
+
+#com{
+    height:40px;
+    margin:0;
+    border:none;
+    outline: none;
+}
+
+#com-line{
+    border-bottom: 1px solid #ddd;
+}
+
+#del-com{
+    margin-top: 10px;
+    border:none;
+    border-radius:30px;
+    background-color:white;
+    padding:3px;
+    width:50px;
+    margin: 5px 5px;
+}
+#del-com:hover{
+    background-color: #ddd;
+    transition-duration: 0.1s;
+}
+#sub-com{
+    margin-top: 10px;
+    border:none;
+    border-radius:30px;
+    background-color:mediumblue;
+    color:white;
+    padding:2px;
+    width:50px;
+    margin: 5px 5px;
+}
+#sub-com:hover{
+    background-color: darkblue;
+    transition-duration: 0.1s;
+}
+
+
+
+.comment-area{
+    height:500px;
+}
+/****우측 메인****/
+
+/*광고*/
+
+ .main-right{
+    display:flex;
+    flex-direction: column;
+ }
+
+#ad-area img{
+    width:100%;
+
+    border-radius:20px;
+}
+
+
+/*추천영상*/
+
+#rec-videos{
+    display:flex;
+    margin: 5px 0;
+}
+#rec-videos>section{
+    flex-basis:50%;
+}
+#thumbnail{
+    height:100%;
+    width:160px;
+    border-radius: 10px;
+}
+
+#rec-vid-title{
+    padding:5px 3px;
+    font-size: 10px;
+    line-height: 5px;
+}
+#rec-vid-title>a{
+    text-decoration:none;
+}
+#rec-vid-title>p:first-of-type{
+    font-weight: bold;
+}
+#rec-vid-title>section{
+    display:flex;
+}

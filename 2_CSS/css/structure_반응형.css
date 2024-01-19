@@ -43,7 +43,7 @@ header > section:nth-of-type(1) {
     width:500px;
 }
 .search-area fieldset{
-    border:2px solidi #455ba8;
+    border:2px solid #455ba8;
     border-radius:5px;
     margin:0;
     padding:2px;
