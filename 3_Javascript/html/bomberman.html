@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>14_봄버맨</title>
+    <style>
+        #box{
+        border : 1px solid black;
+        width : 300px;
+        height: 300px;
+        overflow : hidden; /*이미지 빠져나가지 못하도록*/
+    }
+    img {
+        width : 30px;
+    }
+
+    </style>
+</head>
+<body>
+    
+    <h1>봄버맨!</h1>
+    <h3> 방향키로 이동 : 누르고 있으면 누른 방향으로 계속 이동</h3>
+    <h3> x키 클릭 시 폭탄 생성</h3>
+
+    <div id = "box">
+        <img id = "man" src="../../images/bomberman.png">
+    </div>
+
+
+    <script src="../js/bomberman.js"></script>
+</body>
+</html>
