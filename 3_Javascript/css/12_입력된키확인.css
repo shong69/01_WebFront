@@ -19,24 +19,6 @@
 }
 
 
-.key1{
-  width: 100px;
-  height: 100px;
-  border: 2px solid black;
-  border-radius: 5px;
-  margin : 10px 0;
-
-
-  font-size: 30px;
-  font-weight: bold;
- 
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-
-  user-select : none;
-}
 
 .key{
   width: 100px;

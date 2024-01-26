@@ -141,16 +141,90 @@ document.querySelector("#btn3a").addEventListener("click",function(){
 
 
 
+//----------------------------------1/26-------------------------------------
+
+/*화살표 함수*/
+
+//클래스가 arrow인 요소를 모두 얻어옴(배열 형태로)
+
+const arrowList = document.querySelectorAll(".arrow");
+console.log(arrowList);  //NodeList(4) [button.arrow, button.arrow, button.arrow, button.arrow] 출력됨
+
+//화살표 함수 기본 형태
+arrowList[0].addEventListener("click", ()=>{
+
+    alert("화살표 함수 기본 형태 연습");
+})
+
+
+
+//매개변수가 1개인 경우 : () 생략 가능
+
+function print3(otherFn){
+
+    const numbers = [1,2,3,4];
+    console.log(otherFn(numbers));
+}
+
+arrowList[1].addEventListener("click", e=>{
+    //e : 이벤트 객체(모든 이벤트 관련 정보가 담겨있는 객체)
+    //e.target : 이벤트가 발생한 요소 자체
+
+    e.target.style.backgroundColor= "pink";  //e.target으로 버튼 요소 자체의 style이 바뀌게 된다.
+
+    print3( arr=>{
+        //전달받은 모든 요소를 합할 거임
+        let result = 0;
+        for(let i = 0; i < arr.length;i++){
+            result += arr[i];
+        }
+        return result;
+    });
+})
+
+
+//return 한 줄만 작성된 경우
+function twoNumberPlus(otherFn) {
+    const input1 = Number(prompt("첫 번째 값"));
+    const input2 = Number(prompt("두 번째 값"));
+
+    alert( otherFn(input1,input2));
+}
+
+arrowList[2].addEventListener("click", ()=>{
+
+    twoNumberPlus( (a, b)=> a+b );
+    //return 한 줄만 있는 경우 {}, return 키워드 생략 가능함
+});
 
 
 
 
+/* return 한 줄인데 object를 반환하는 경우 */
+
+function printObject(otherFn){
+
+    const obj = otherFn("홍길동", 20);
+
+    console.log(`obj.name : ${obj.name}`);
+    console.log(`obj.age : ${obj.age}`);
+
+}
+
+arrowList[3].addEventListener("click", ()=>{
+
+    printObject((name, age)=>{
+        return {"name":name,"age":age};
+        //JS 객체 (K:V,K:V)
+    });
+
+});
 
 
 
+/*즉시 실행 함수 */
 
-
-
-
-
-
+(()=>{
+    console.log("즉시 실행 함수 입니다");
+    console.log("함수 모양이 좀 어렵죠?");
+})()

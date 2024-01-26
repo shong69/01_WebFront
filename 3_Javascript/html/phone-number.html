@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>phone-number</title>
+    <link rel="stylesheet" href="../css/phone-number.css">
+</head>
+<body>
+    
+    <div class = "form">
+        <div class="left"><!--번호입력-->
+            <div class = "up"> <!--입력 번호 노출-->
+                <div id="output"></div> 
+                <div></div>
+            </div>
+            <div class ="mid"><!--1~9 입력-->
+                <table>
+                    <tr>
+                        <td id = "num1">1</td>
+                        <td id = "num2">2</td>
+                        <td id = "num3">3</td>
+
+                    </tr>
+                    <tr>
+                        <td id = "num4">4</td>
+                        <td id = "num5">5</td>
+                        <td id = "num6">6</td>
+                    </tr>
+                    <tr>
+                        <td id = "num7">7</td>
+                        <td id = "num8">8</td>
+                        <td id = "num9">9</td>
+                    </tr>
+                    <tr>
+                        <td id = "hash">#</td>
+                        <td id = "num0">0</td>
+                        <td id = "star">*</td>
+                    </tr>
+                </table>
+            </div>
+            <div class="down"><!--추가, 초기화 버튼-->
+                <div><button id = "add">추가</button></div>
+                <div><button id = "reset">초기화</button></div>
+            </div>
+        </div>
+        <div class="right"> <!--전화번호 목록-->
+            <div>전화 번호 목록</div>
+            <div>
+                <div id = "list-phonNum">01000000000</div>
+                <div class="adj">
+                    <span id="favorite"></span>
+                    <span id="del">&times</span>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+    <script src="../js/phone-number.js"></script>
+</body>
+</html>

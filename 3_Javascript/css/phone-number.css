@@ -1,0 +1,123 @@
+/* *{
+    border : 1px solid black;
+}*/
+
+
+.form{
+    width:600px;
+    margin:auto;
+    display:flex;
+}
+.left{
+    flex-basis: 60%;
+    margin:auto;
+}
+.right{
+    flex-basis: 40%;
+    padding : 30px;
+}
+
+.up{
+    height:50px;
+}
+.up>div:last-of-type{
+    width: 280px;
+    margin: auto;
+    border-bottom: 2px solid #ddd;
+}
+#output{  /*입력돼서 나타나는 숫자*/
+    height:50px;
+    font-size:30px;
+    margin:0 20px;
+    text-align: center;
+    font-weight:bold;
+}
+
+
+.mid{
+    display : flex;
+    height: 400px;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+table{
+    height:100%;
+    width:100%;
+    text-align: center;
+}
+td{
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius:10px;
+}
+td:hover{
+    transition:0.5s;
+    background-color: cornflowerblue;
+}
+.down>div:first-of-type{
+    width : 100%;
+}
+.down>last-of-type{
+    width : 100%;
+}
+
+#add{
+    border:2px solid green;
+    border-radius: 5px;
+    width: 300px;
+    background-color: transparent;
+    margin:5px;
+    font-size: 15px;
+    color:green;
+    cursor: pointer;
+    
+}
+#reset{
+    border:2px solid #ddd;
+    border-radius: 5px;
+    width: 300px;
+    background-color: transparent;
+    margin:5px;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+
+
+/********right*********/
+
+
+
+.right>div:first-of-type{
+    text-align: center;
+    font-weight :bold;
+    font-size: 15px;
+    margin-bottom: 10px;
+}
+.right>div:last-of-type{
+    display:flex;
+}
+
+#list-phonNum{
+    justify-content: center;
+    width: 160px;
+    text-align: center;
+    border:3px,solid, black;
+}
+.adj{
+
+    display:flex;
+    align-items: center;
+}
+#del{
+    display: inline-block;
+    margin-left: 5px;
+    font-size: 20px;
+    cursor: pointer;
+    user-select: none;
+    
+  }
