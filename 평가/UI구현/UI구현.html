@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UI구현</title>
+    <link rel="stylesheet" href = "/UI구현.css">
+</head>
+<body>
+    <section>
+        <form>
+            <table>
+                <tr>
+                    <th>너비 : </th>
+                    <td><input id="wid">  px</td>
+                    <th>높이 : </th>
+                    <td><input id="hei">  px</td>
+                </tr>
+                <tr>
+                    <th>글자크기 : </th>
+                    <td><input id="siz">  px</td>
+                    <th>굵기 : </th>
+                    <td><label for ="normal">보통</label><input type ="radio" name = "wei" id  = "normal">
+                    <label for ="bold">굵게</label><input type ="radio" name = "wei" id  = "bold"></td>
+                </tr>
+                <tr>
+                    <th>글자색 : </th>
+                    <td><input id="f-color"></td>
+                    <th>배경색 : </th>
+                    <td><input id="b-color"></td>
+                </tr>
+                <tr>
+                    <th>가로정렬 : </th> <!--text 가로정렬-->
+                    <td><label for ="left">왼쪽</label><input type ="radio" name = "horizon" id  = "left">
+                    <label for="center" >가운데</label><input type ="radio" name = "horizon" id="center">
+                    <label for = "right">오른쪽</label><input type ="radio" name="horizon" id ="right"></td>
+                </tr>
+                <tr>
+                    <th>세로정렬 : </th><!--text 세로정렬-->
+                    <td><label for ="up">위</label><input type ="radio" name = "vertical" id  = "up">
+                        <label for="mid" >가운데</label><input type ="radio" name = "vertical" id="mid">
+                        <label for = "down">아래</label><input type ="radio" name="vertical" id ="down"></td>
+
+                </tr>
+                <tr>
+                    <th>출력 문자열 :</th>
+                    <td><input id="text-line" type = "text"></td>
+                </tr>
+            </table>
+            <button id = "submit-btn"type="button">적용하기</button>
+        </form>
+    </section>
+    <section id = container><!--그림 구현-->
+    </section>
+
+    <script src="/UI구현.js"></script>
+</body>
+</html>
