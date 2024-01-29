@@ -1,114 +1,78 @@
 //누른 번호대로 output에 노출되기(하나씩 리스트 변수에 +=하기 )
-let output = document.getElementById("output")
-const num1 = document.getElementById("num1");
-const num2 = document.getElementById("num2");
-const num3 = document.getElementById("num3");
-const num4 = document.getElementById("num4");
-const num5 = document.getElementById("num5");
-const num6 = document.getElementById("num6");
-const num7 = document.getElementById("num7");
-const num8 = document.getElementById("num8");
-const num9 = document.getElementById("num9");
-const num_hash = document.getElementById("hash");
-const num0 = document.getElementById("num0");
-const num_star = document.getElementById("star");
+const output = document.getElementById("output")
+const numlist = document.querySelectorAll("#num"); //배열로 받음
 
-let phone_number=[];
 
-num1.addEventListener("click",()=>{
-    phone_number += 1;
-    output.innerText = phone_number;
 
-});
+for(let i =0;i<numlist.length;i++){
 
-num2.addEventListener("click",()=>{
-    phone_number += 2;
-    output.innerText = phone_number;
+    numlist[i].addEventListener("click",(e)=>{
+        output.innerText += e.target.innerText;
+    });
+};
 
-});
-
-num3.addEventListener("click",()=>{
-    phone_number += 3;
-    output.innerText = phone_number;
-
-});
-num4.addEventListener("click",()=>{
-    phone_number += 4;
-    output.innerText = phone_number;
-
-});
-num5.addEventListener("click",()=>{
-    phone_number += 5;
-    output.innerText = phone_number;
-
-});
-num6.addEventListener("click",()=>{
-    phone_number += 6;
-    output.innerText = phone_number;
-
-});
-num7.addEventListener("click",()=>{
-    phone_number += 7;
-    output.innerText = phone_number;
-
-});
-num8.addEventListener("click",()=>{
-    phone_number += 8;
-    output.innerText = phone_number;
-
-});
-num9.addEventListener("click",()=>{
-    phone_number += 9;
-    output.innerText = phone_number;
-
-});
-num_hash.addEventListener("click",()=>{
-    phone_number += "#";
-    output.innerText = phone_number;
-
-});
-num0.addEventListener("click",()=>{
-    phone_number += 0;
-    output.innerText = phone_number;
-
-});
-num_star.addEventListener("click",()=>{
-    phone_number += "*";
-    output.innerText = phone_number;
-
-});
-
-console.log(output);
 
 //추가 버튼을 누르면 전화번호 변수를 전화번호 목록에다가 추가하기
-//output에서 사라짐
-/*
 
-<div>
-    <div id = "list-phonNum">01000000000</div>
-    <div class="adj">
-        <span id="favorite"></span>
-        <span id="del">&times</span>
-    </div>
-
-</div> 여기다가 요소 추가할거임
-*/
+const phoneNumList = document.querySelector("#phonNumList")
 const add = document.querySelector("#add");
+
 add.addEventListener("click", ()=>{
-    
-    
-    phone_number=[];
-    output.innerHTML="";
+    if(output.length ==0){
+        alert("전화번호를 입력하세요");
+        return;
+    };
+
+    const phone1 = document.createElement("div");
+    phone1.classList.add("phone1");
+    phoneNumList.append(phone1);
+
+    const phone = document.createElement("div");
+    phone.classList.add("phonNum");
+    phone.innerText=output.innerText;
+    phone1.append(phone);
+
+    phone1.innerHTML+="<button class='star fa-regular fa-star'></button><div class='del'>&times</div>"
+    //button의 아이콘 클래스에 띄어쓰기가 있어서 classList.add()가 안됨
+    output.innerText="";  //output에서 안보이기
+    //createElement
+
+
+
 })
 
-
-//초기화 버튼을 누르면 output의 내용 사라짐
+//초기화 누르면 output 번호 사라짐
 const reset = document.querySelector("#reset");
 reset.addEventListener("click", ()=>{
-    phone_number=[];
-    output.innerHTML="";
+    output.innerText="";
 });
 
 
 //전화번호 목록에서 즐겨찾기를 누르면 상단에 계속 떠 있어야 함
-//전화번호 목록에서 삭제 버튼을 누르면 해당 블록 삭제됨
+//누르면 채워지도록 악 다시하기
+/*
+const destar = document.querySelector(".empty");//즐찾 해제
+const star = document.querySelector(".filled")//즐찾 등록
+
+destar.addEventListener("click",()=>{
+    destar.classList.remove("hide")
+    star.classList.add("hide");
+});
+star.addEventListener("click",()=>{
+    star.classList.remove("hide");
+    destar.classList.add("hide");
+    star.style.color = "yellow";
+    star.style.border="1px solid black";
+});
+*/
+
+
+//전화번호 목록에서 삭제 버튼을 누르면 해당 블록 삭제됨->부모 삭제
+
+const dellist = document.querySelectorAll(".del");
+
+for(let i = 0; i<dellist.length;i++){
+    dellist[i].addEventListener("click", (e)=>{
+        e.target.parentElement.remove();
+    });
+}

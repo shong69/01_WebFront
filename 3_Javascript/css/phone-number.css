@@ -19,9 +19,10 @@
 
 .up{
     height:50px;
+    margin-top:30px;
 }
 .up>div:last-of-type{
-    width: 280px;
+    width: 220px;
     margin: auto;
     border-bottom: 2px solid #ddd;
 }
@@ -98,26 +99,32 @@ td:hover{
     font-size: 15px;
     margin-bottom: 10px;
 }
-.right>div:last-of-type{
+
+.phone1{
+    width:200px;
     display:flex;
+
+}
+.phonNum{
+    flex-basis:70%;
+    margin-left: 10px;
 }
 
-#list-phonNum{
-    justify-content: center;
-    width: 160px;
-    text-align: center;
-    border:3px,solid, black;
+.star{
+    flex-basis :15%;
+    background-color: transparent;
+    border : none;
+    cursor:pointer;
 }
-.adj{
-
-    display:flex;
-    align-items: center;
-}
-#del{
-    display: inline-block;
-    margin-left: 5px;
+.hide {
+    display: none;
+  }
+.del{
+    flex-basis :15%;
+    margin-bottom: 5px;
     font-size: 20px;
     cursor: pointer;
     user-select: none;
     
   }
+
