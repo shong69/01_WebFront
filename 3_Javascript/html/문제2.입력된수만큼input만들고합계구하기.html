@@ -27,6 +27,35 @@
     </div>
 
     <script>
+        const btn = document.querySelector("#btn");
+        const sumbtn = document.querySelector("#sumBtn");
+        const result  = document.querySelector("#result"); //input모두 더한 값 나타내기
+        
+
+
+        btn.addEventListener("click", ()=>{
+            const num = btn.previousElementSibling.value;
+            const container = document.querySelector("#container");
+
+            for(let i = 0;i<num;i++){
+                const inputnum = document.createElement("input");
+                inputnum.type = "number";
+                inputnum.classList.add("input-number");
+
+                container.append(inputnum);
+            };
+        });
+
+        sumbtn.addEventListener("click",()=>{
+            const numlist = document.querySelectorAll(".input-number");
+            let sum = 0;
+            for(let i=0;i<numlist.length;i++){
+                sum += Number(numlist[i].value);
+            };
+
+            result.innerText = sum;
+        });
+
     </script>
 </body>
 </html>

@@ -140,7 +140,7 @@
     <hr>
     <br><br><br>
 
-    <form>
+    <form id = "form" action ="#">
         <fieldset>
             <legend>회원 가입 양식</legend>
             <table>
@@ -160,24 +160,25 @@
                 <tr>
                     <td>이름</td>
                     <td><input type = "text"id="nameCheck"></td>
+                    <td><span id = "nameResult"></span></td>
                 </tr>
                 <tr>
                     <td>성별</td>
-                    <td><label for ="gender">여</label><input type="radio" name = "gender">
-                        <label for = "gender">남</label><input type="radio" name = "gender"></td>
+                    <td><label class = "gender" for ="gender">여</label><input type="radio" name = "gender">
+                        <label class = "gender" for = "gender">남</label><input type="radio" name = "gender"></td>
                 </tr>
                 <tr>
                     <td>전화번호</td>
-                    <td><input type="number"></td>
+                    <td><input id ="phonenumber" type="tel"></td>
                 </tr>
                 <tr>
-                    <td></td>
+                    <td>이메일</td>
                     <td><input type="text"></td>
                 </tr>
                 <tr>
                     <td ></td>
                     <td><button type="button" id = "reset">초기화</button>
-                        <button type="button" id = "submit">제출</button></td>
+                        <input type="submit"></td>
                 </tr>
                 
             </table>

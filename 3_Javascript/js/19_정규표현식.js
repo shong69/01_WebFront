@@ -125,16 +125,11 @@ document.getElementById("inputPno").addEventListener("keyup",function(){
 형식이 일치할 경우 입력창의 배경색을 springgreen으로 변경
 */
 
-document.getElementById("idCheck").addEventListener("keyup",function(){
-    const idregExp=/^[a-z]+[a-zA-Z]|d|-|_{6,14}/;
-
-    console.log(idregExp.test(this.value));
-    if(this.value.length==0){
-
-    }
+document.getElementById("idCheck").addEventListener("change",function(){
+    const idregExp=/^[a-z]{1}[a-zA-Z0-9-_]{5,14}$/;
     
     if (idregExp.test(this.value)){
-        this.value.style.backgroundColor = "green";
+        this.style.backgroundColor = "springgreen";
     }else{
         alert("아이디 양식이 틀렸습니다.");
     };
@@ -174,6 +169,62 @@ document.getElementById("pwCheck2").addEventListener("keyup", (e)=>{
 형식이 일치하지 않을경우 : "이름" 입력창 오른쪽에 "한글만 입력하세요" 글자를 빨간색으로 출력.
 */
 
+const nameCheck = document.querySelector("#nameCheck")
+nameCheck.addEventListener("change",(e)=>{
+    const nameResult = document.querySelector("#nameResult");
+    const nameregExp=/^[가-힣]{2,5}$/;
+
+    if(nameregExp.test(e.target.value)){
+        nameResult.innerText = "정상입력"
+        nameResult.style.color = "green";
+    }else{
+        nameResult.innerText = "한글만 입력하세요"
+        nameResult.style.color = "red";
+    }
+});
+
+/*
+회원가입 버튼 클릭 시 : validate() 함수를 호출하여 성별이 선택 되었는지, 
+전화번호가 형식에 알맞게 작성되었는지 검사
+
+- 성별이 선택되지 않은 경우
+    "성별을 선택해주세요." 경고창(==대화상자) 출력 후
+    submit 기본 이벤트를 제거하여 회원가입이 진행되지 않게 함.
+
+전화번호 정규 표현식 : /^[0][0-9]{1,2}-[0-9]{3,4}-[0-9]{4}/
+    - 전화번호 형식이 올바르지 않을 경우
+    "전화번호의 형식이 올바르지 않습니다" 경고창(==대화상자) 출력 후
+    submit 기본 이벤트를 제거하여 회원가입이 진행되지 않게 함. 
+
+*/
+
+//성별, 전화번호을 확인하는 validate함수
+
+const submit =document.querySelector("#form");
+ submit.addEventListener("submit",function(event){
+    if(validate()==false){
+        //submit 기본 이벤트를 제거하여 회원가입이 진행되지 않게 함. 
+        event.preventDefault(); 
+    };
+ });
 
 
 
+
+function validate() {
+    //성별 선택
+    const genderli = document.getElementsByName("gender");
+
+    const phonNum = document.getElementById("phonenumber");
+    const phonregExp = /^[0][0-9]{1,2}-[0-9]{3,4}-[0-9]{4}/;
+
+    if(genderli[0].checked == false && genderli[1].checked==false){
+        alert("성별을 선택해주세요");
+        return false;
+    }else if(phonregExp.test(phonNum.value)==false){
+        alert("전화번호의 형식이 올바르지 않습니다.");
+        return false;
+    }else{
+        return true;
+    };    
+};
