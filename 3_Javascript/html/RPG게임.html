@@ -54,7 +54,7 @@
             width:200px;
             height:40px;
             border-radius: 10px;;
-
+            cursor: pointer;
         }
 
         #imgarea{
@@ -73,6 +73,8 @@
         }
         #logInterface>div:first-of-type{
             flex-basis:40%;
+            display:flex;
+            flex-direction: row;
         }
         #logInterface>div:nth-of-type(2){
             flex-basis:40%;
@@ -80,6 +82,16 @@
         #logInterface button{
             flex-basis:10%;
             font-size: 20px;
+        }
+        #monsterimg{
+            width : 300px;
+            height:100%;
+            border:1px solid red;
+        }
+        #m-Info{
+            width : 300px;
+            height:100%;
+            border:1px solid red;
         }
         
         #gameLog{
@@ -123,11 +135,11 @@
     <div id="content">
         <div id = "charInterface">
             <div>
-                <button id ="charGenerate" onclick="startGame()" class = "subtitle">Generate your character!</button>
+                <button class = "subtitle" id ="charGenerate" onclick="startGame()" >Generate your character!</button>
             </div>
             <div>
                 <div id = "imgarea">
-                    <img id="charImg">
+                    <img id="charImg" src="#">
                 </div>
                 <div id = "charInfo">
                     <h3>Character Info</h3>
@@ -138,8 +150,10 @@
     
         
         <div id = "logInterface">
+            <h3 class = "subtitle">Monster Info</h3>
             <div id = "monsterInfo"><!--문수터 정보창-->
-                <h3 class = "subtitle">Monster Info</h3>
+                <div id = "monsterimg"><img id="monimg"  src="#"></div>
+                <div id="m-Info"></div>
             </div>
             <div>
                 <h2>로그</h2>
@@ -159,6 +173,6 @@
         </div>
     </div>
 
-    <script src=""></script>
+    <script src="../js/RPG게임.js"></script>
 </body>
 </html>

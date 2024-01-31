@@ -122,6 +122,8 @@ const pallete = document.querySelector("#box3")  //box3
 const input3 = document.querySelector("#input3");
 
 input3.addEventListener("keyup", function(e){
+    console.log(e.key);
+    console.log(e.target);
     const color = input3.color;
 
     //e : 이벤트 객체(발생한 이벤트에 대한 정보를 담은 객체)

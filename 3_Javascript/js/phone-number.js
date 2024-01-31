@@ -32,8 +32,33 @@ add.addEventListener("click", ()=>{
     phone.innerText=output.innerText;
     phone1.append(phone);
 
-    phone1.innerHTML+="<button class='star fa-regular fa-star'></button><div class='del'>&times</div>"
-    //button의 아이콘 클래스에 띄어쓰기가 있어서 classList.add()가 안됨
+    const star=document.createElement("div");
+    star.classList.add("star");
+    phone1.append(star);
+    
+    const icon = document.createElement("div");
+    icon.classList.add("fa-regular");
+    icon.classList.add("fa-star");
+    icon.classList.add("empty");
+    star.append(icon);
+    icon.onclick = function(){emstar(icon)};
+
+    const icon2=document.createElement("div");
+    icon2.classList.add("fa-solid");
+    icon2.classList.add("fa-star");
+    star.append(icon2);
+    icon2.onclick = function(){fullstar(icon2)};
+
+    
+    
+
+    const delbtn = document.createElement("div");
+    delbtn.classList.add("del");
+    delbtn.innerHTML="&times;";
+    phone1.append(delbtn);
+
+    delbtn.onclick = function(){delBtn(delbtn)};
+
     output.innerText="";  //output에서 안보이기
     //createElement
 
@@ -48,31 +73,27 @@ reset.addEventListener("click", ()=>{
 });
 
 
-//전화번호 목록에서 즐겨찾기를 누르면 상단에 계속 떠 있어야 함
-//누르면 채워지도록 악 다시하기
-/*
-const destar = document.querySelector(".empty");//즐찾 해제
-const star = document.querySelector(".filled")//즐찾 등록
+//즐겨찾기 누르면 채워짐
 
-destar.addEventListener("click",()=>{
-    destar.classList.remove("hide")
-    star.classList.add("hide");
-});
-star.addEventListener("click",()=>{
-    star.classList.remove("hide");
-    destar.classList.add("hide");
-    star.style.color = "yellow";
-    star.style.border="1px solid black";
-});
-*/
+function emstar(btn){
+    if (btn.classList.contains("empty")){
+        btn.classList.remove("empty");
+        btn.nextElementSibling.classList.add("empty");
+    }else{return;};
+};
+function fullstar(btn){
+    if(btn.classList.contains("empty")){
+        btn.classList.remove("empty");
+        btn.previousElementSibling.classList.add("empty");
+    };
+};
+
+//empty 클래스는 옮겨지는데 정작 display none이 적용되지 않음
+
 
 
 //전화번호 목록에서 삭제 버튼을 누르면 해당 블록 삭제됨->부모 삭제
 
-const dellist = document.querySelectorAll(".del");
-
-for(let i = 0; i<dellist.length;i++){
-    dellist[i].addEventListener("click", (e)=>{
-        e.target.parentElement.remove();
-    });
-}
+function delBtn(btn){
+    btn.parentElement.remove();
+};

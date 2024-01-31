@@ -20,7 +20,7 @@ reset.addEventListener("click",()=>{
 */
 
 for(let i = 0;i<numlist.length;i++){
-    numlist[i].addEventListener("click",(e)=>{
+    numlist[i].addEventListener("click",()=>{
         if(result.innerText.length < 10){
             result.innerText += numlist[i].innerText;
         }else{

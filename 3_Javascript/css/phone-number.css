@@ -109,16 +109,18 @@ td:hover{
     flex-basis:70%;
     margin-left: 10px;
 }
-
-.star{
-    flex-basis :15%;
-    background-color: transparent;
-    border : none;
-    cursor:pointer;
+.fa-solid{
+    color : yellow;
 }
-.hide {
+.fa-star{
+    font-size:15px;
+    cursor: pointer;
+}
+
+.empty {
     display: none;
   }
+
 .del{
     flex-basis :15%;
     margin-bottom: 5px;
