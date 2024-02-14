@@ -8,57 +8,47 @@
     <script src="https://kit.fontawesome.com/4b505ed7b7.js" crossorigin="anonymous"></script>
 </head>
 <body>
+    <main>
+        <section class="container">
+            <div id = display></div>
     
-    <div class = "form">
-        <div class="left"><!--번호입력-->
-            <div class = "up"> <!--입력 번호 노출-->
-                <div id="output"></div> 
-                <div></div>
+            <div class = "keypad">
+                <div class = "key">1</div>
+                <div class = "key">2</div>
+                <div class = "key">3</div>
+                <div class = "key">4</div>
+                <div class = "key">5</div>
+                <div class = "key">6</div>
+                <div class = "key">7</div>
+                <div class = "key">8</div>
+                <div class = "key">9</div>
+                <div class = "key">#</div>
+                <div class = "key">0</div>
+                <div class = "key">*</div>
             </div>
-            <div class ="mid"><!--1~9 입력-->
-                <table>
-                    <tr>
-                        <td id = "num">1</td>
-                        <td id = "num">2</td>
-                        <td id = "num">3</td>
-                    </tr>
-                    <tr>
-                        <td id = "num">4</td>
-                        <td id = "num">5</td>
-                        <td id = "num">6</td>
-                    </tr>
-                    <tr>
-                        <td id = "num">7</td>
-                        <td id = "num">8</td>
-                        <td id = "num">9</td>
-                    </tr>
-                    <tr>
-                        <td id = "num">#</td>
-                        <td id = "num">0</td>
-                        <td id = "num">*</td>
-                    </tr>
-                </table>
-            </div>
-            <div class="down"><!--추가, 초기화 버튼-->
-                <div><button id = "add">추가</button></div>
-                <div><button id = "reset">초기화</button></div>
-            </div>
-        </div>
-        <div class="right"> <!--전화번호 목록-->
-            <div>전화 번호 목록</div>
-            <div id ="phonNumList">
-                <div class = "phone1">
-                    <div class = "phonNum">01011112222</div>
-                    <div class = "star">
-                        <div class= "fa-regular fa-star  empty"></div>
-                        <div class="fa-solid fa-star"></div>
-                    </div>
-                    <div class="del hide">&times;</div>
-                </div>
-            </div>
-        </div>
+    
+            <button id ="addBtn">추가</button>
+            <button id ="resetBtn">초기화</button>
+        </section>
 
-    </div>
+
+        <ul class="number-list"> <!--전화번호 목록-->
+            <li> <strong>전화 번호 목록</strong></li>
+            <!--<li>
+                <span>01012341234</span>
+                <span>☆</span>
+                <span class="remove">&times;</span>
+            </li>
+            <li class = "favorites">
+                <span>01012341234</span>
+                <span>★</span>
+                <span class="remove">&times;</span>
+            </li>-->
+        </ul>
+    </main>
+
+
+
 
     <script src="../js/phone-number.js"></script>
 </body>

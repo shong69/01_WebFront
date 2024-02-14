@@ -1,132 +1,100 @@
-/* *{
+*{
     border : 1px solid black;
-}*/
-
-
-.form{
-    width:600px;
-    margin:auto;
-    display:flex;
-}
-.left{
-    flex-basis: 60%;
-    margin:auto;
-}
-.right{
-    flex-basis: 40%;
-    padding : 30px;
+    box-sizing : border-box;
+    padding: 0;
+    margin : 0;
 }
 
-.up{
-    height:50px;
-    margin-top:30px;
-}
-.up>div:last-of-type{
-    width: 220px;
-    margin: auto;
-    border-bottom: 2px solid #ddd;
-}
-#output{  /*입력돼서 나타나는 숫자*/
-    height:50px;
-    font-size:30px;
-    margin:0 20px;
-    text-align: center;
-    font-weight:bold;
-}
-
-
-.mid{
+main{
+    width : 700px;
     display : flex;
-    height: 400px;
-    display:flex;
+    justify-content: space-between;
+}
+
+.container{
+    display : flex;
     flex-direction: column;
-    align-items: center;
-
+    width : 400px;
 }
-
-table{
-    height:100%;
-    width:100%;
+#display{
+    height:50px;
     text-align: center;
+    font-size: 40px;
+    font-weight: bold;
+    margin-bottom:20px;
 }
-td{
+
+.keypad{
+    display:flex;
+    flex-wrap: wrap;
+    margin-bottom : 20px;
+    border-top : 2px solid #ddd;
+}
+.key{
+    width:33.33%;
+    display:flex;
+    justify-content: center;
+    align-items : center;
+    font-weight: bold;
+    font-size: 30px;
+    border-radius: 50%;
+    cursor : pointer;
+    user-select: none;
+    transition-duration : 0.2s;
+}
+.key:hover{
+    background-color: #ddd;
+}
+.key:active{
+    transform:scale(1.1);
+}
+
+.container>button{
+    margin:5px;
+    height:40px;
     font-size: 20px;
     font-weight: bold;
-    cursor: pointer;
+    background-color: white;
     border-radius:10px;
-}
-td:hover{
-    transition:0.5s;
-    background-color: cornflowerblue;
-}
-.down>div:first-of-type{
-    width : 100%;
-}
-.down>last-of-type{
-    width : 100%;
+    cursor:pointer;
 }
 
-#add{
-    border:2px solid green;
-    border-radius: 5px;
-    width: 300px;
-    background-color: transparent;
-    margin:5px;
-    font-size: 15px;
-    color:green;
-    cursor: pointer;
-    
-}
-#reset{
-    border:2px solid #ddd;
-    border-radius: 5px;
-    width: 300px;
-    background-color: transparent;
-    margin:5px;
-    font-size: 15px;
-    cursor: pointer;
+#addBtn:hover{
+    color:white;
+    background-color: green;
 }
 
-
+#resetBtn:hover{
+    color:white;
+    background-color: gray;
+}
 
 /********right*********/
-
-
-
-.right>div:first-of-type{
-    text-align: center;
-    font-weight :bold;
-    font-size: 15px;
-    margin-bottom: 10px;
-}
-
-.phone1{
-    width:200px;
-    display:flex;
-
-}
-.phonNum{
-    flex-basis:70%;
-    margin-left: 10px;
-}
-.fa-solid{
-    color : yellow;
-}
-.fa-star{
-    font-size:15px;
-    cursor: pointer;
-}
-
-.empty {
-    display: none;
-  }
-
-.del{
-    flex-basis :15%;
-    margin-bottom: 5px;
+.number-list{
+    width: 250px;
+    list-style : none;
+    border-left : 2px solid #ddd;
+    padding-left: 20px;
     font-size: 20px;
-    cursor: pointer;
+}
+.number-list li {
+    margin : 10px, 0;
+    display : flex;
+    justify-content : space-evenly;
+}
+number-list li>span:not(:first-child){
+    cursor : pointer;
     user-select: none;
-    
-  }
+}
+number-list li>span:not(:first-child):hover{
+    font-weight: bold;
+}
 
+
+.favorites > span:first-child{
+    color : red;
+}
+
+.favorites > span:nth-child(2){
+    color : orange;
+}
